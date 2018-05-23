@@ -1,0 +1,34 @@
+ /*
+  clipping styles
+ */
+
+ @clip-opacity : 0.5; // when a region is clipped, what is visible behind
+/*
+  clipping does not reveal the background or anything underneath!! Not too sure where the background comes from!!
+ */
+ .clip {
+
+   // clip-opacity defined here is not visible below!! Ahh, thats becuase it expands where its called!!
+  // ie where we actuall create the style by calling the mixin
+  /*
+    becuase its bottom, we assume full width, and reduce the height on the RHS to @height
+    note series of pairs (x,y)
+   */
+  .bottom(@height : 90% , @width : 50%) {
+
+    .clip-bottom {
+      // origin, tr, br, br, bl
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% @height, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% @height, 0 100%);
+      //opacity : @clip-opacity;
+    }
+
+  }
+
+}
+/*
+  need to generate the class - however, each param class like this will be static
+  therefore ther will only ever only be one
+  unless we parameterise the class name as well
+ */
+.clip > .bottom(50%);

@@ -1,0 +1,558 @@
+/*
+  make the .text- and .bg- color classes
+ */
+/*
+
+  next - combine the colours into allowed combinations
+
+ */
+/*
+    icons
+   */
+/*
+  boxes
+
+  apply box or round-border classes
+
+ */
+/*
+    work on different shadow borders top, right etc...
+ */
+/*
+  clipping styles
+ */
+/*
+  clipping does not reveal the background or anything underneath!! Not too sure where the background comes from!!
+ */
+.clip {
+  /*
+    becuase its bottom, we assume full width, and reduce the height on the RHS to @height
+    note series of pairs (x,y)
+   */
+}
+/*
+  need to generate the class - however, each param class like this will be static
+  therefore ther will only ever only be one
+  unless we parameterise the class name as well
+ */
+.clip-bottom {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
+}
+/*
+  add gradient to background
+ */
+.sub-menu {
+  background: linear-gradient(270deg, #ccc, #003366);
+  /* For Safari 5.1 to 6.0 */
+  background: -webkit-linear-gradient(left, #ccc, #003366);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #ccc, #003366);
+}
+/* round corners on submenus */
+ul.sub-menu {
+  border: 1px solid #001933;
+  border-radius: 5px;
+  moz-border-radius: 5px;
+  webkit-border-radius: 5px;
+  border-width: 1px !important;
+  padding: 5px !important;
+}
+#logo {
+  background-color: #ccc;
+  border: 1px solid #001933;
+  border-radius: 0;
+  moz-border-radius: 0;
+  webkit-border-radius: 0;
+  border-width: 0 !important;
+  padding: 5px !important;
+  max-height: 90%;
+}
+/* move from right to left - need to move the search right */
+#et-top-navigation {
+  float: left;
+}
+#top-menu-nav,
+#top-menu {
+  vertical-align: middle;
+}
+.et_header_style_left .et-fixed-header #et-top-navigation nav > ul > li > a,
+.et_header_style_split .et-fixed-header #et-top-navigation nav > ul > li > a {
+  padding-bottom: 5px;
+}
+current_page_item,
+#et-top-navigation li.menu-item {
+  color: #ccc;
+  border: 1px solid #001933;
+  border-radius: 5px;
+  moz-border-radius: 5px;
+  webkit-border-radius: 5px;
+  border-width: 1px !important;
+  padding: 5px !important;
+  background: linear-gradient(45deg, #ccc, #cccc99);
+  /* For Safari 5.1 to 6.0 */
+  background: -webkit-linear-gradient(left, #ccc, #cccc99);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #ccc, #cccc99);
+}
+/*
+  need to make some sort of subtle button styling
+ */
+/*
+  override huge padding on a elements in menu
+ */
+.et_header_style_left #et-top-navigation nav > ul > li > a,
+.et_header_style_split #et-top-navigation nav > ul > li > a {
+  padding-bottom: 5px;
+}
+/*  create a multi col submenu */
+.sub-menu-columns {
+  /*width: 40px;	*/
+}
+.sub-menu-columns ul.sub-menu {
+  display: inline-block;
+  float: left;
+  width: 500px;
+  height: 400px;
+  overflow-y: auto;
+}
+/* stop long text break flows */
+.sub-menu-columns ul.sub-menu li {
+  overflow-x: hidden;
+}
+/* alt cols left and right */
+.sub-menu-columns ul.sub-menu li:nth-child(odd) {
+  float: left;
+  margin-right: 10px;
+}
+.sub-menu-columns ul.sub-menu li:nth-child(even) {
+  float: right;
+}
+/* move menu to left */
+/*
+#et-top-navigation {
+	float :left;
+}
+*/
+/* create some space around the text */
+/*
+current_page_item ,
+#et-top-navigation  li.menu-item {
+	color:#666;
+}
+#et-top-navigation  li.menu-item {
+	background-color:#aaa;
+	padding-left: 10px;
+	padding-top: 10px;
+	margin : 5px;
+	border-radius:5px;
+}
+
+*/
+/* hover effect */
+/*
+#et-top-navigation  li.menu-item:hover {
+	color:#333;
+	background-color:#999;
+}
+
+*/
+/* sticky top nav
+/*
+  #et-top-navigation {
+
+    background:#2194af;
+    height:60px;
+    z-index:170;
+    margin:0 auto;
+    border-bottom:1px solid #dadada;
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    text-align: right;
+    padding-right:30px
+}
+*/
+/* transparent menus */
+/*#et-top-navigation {
+	background-color:transparent;
+}
+*/
+.note {
+  width: 30%;
+  padding: 1em 1.5em;
+  margin: 2em auto;
+  color: #fff;
+  background: #97C02F;
+  border-radius: 5px;
+}
+.fold {
+  position: relative;
+}
+.fold::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-width: 0 16px 16px 0;
+  border-style: solid;
+  border-color: #658E15 #fff;
+  /*
+  only needed for FF 3.x
+  display: block;
+  width: 0
+  */
+  /*
+    0 hor for top border. 1px to show
+    -1 for right border to hide hor, 1 for vert
+   */
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), -1px 1px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), -1px 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), -1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+/*
+  color palette 12
+  https://www.colorcombos.com/color-schemes/12/ColorCombo12.html
+ */
+/*
+  dark on light theme
+ */
+/*
+
+  now we need to combine them in a way that works for divi
+
+ */
+.text-silver {
+  color: #ccc;
+}
+.bg-silver {
+  background-color: #ccc;
+}
+.text-gray {
+  color: #ccc;
+}
+.bg-gray {
+  background-color: #ccc;
+}
+.text-grey {
+  color: #ccc;
+}
+.bg-grey {
+  background-color: #ccc;
+}
+.text-white {
+  color: #fff;
+}
+.bg-white {
+  background-color: #fff;
+}
+.text-blue {
+  color: #003366;
+}
+.bg-blue {
+  background-color: #003366;
+}
+.text-gold {
+  color: #cccc99;
+}
+.bg-gold {
+  background-color: #cccc99;
+}
+.gold-on-blue {
+  color: #cccc99;
+  background-color: #003366;
+}
+.gold-on-white {
+  color: #cccc99;
+  background-color: #fff;
+}
+.gold-on-grey {
+  color: #cccc99;
+  background-color: #ccc;
+}
+.gold-on-gray {
+  color: #cccc99;
+  background-color: #ccc;
+}
+.gold-on-silver {
+  color: #cccc99;
+  background-color: #ccc;
+}
+.blue-on-gold {
+  color: #003366;
+  background-color: #cccc99;
+}
+.blue-on-white {
+  color: #003366;
+  background-color: #fff;
+}
+.blue-on-grey {
+  color: #003366;
+  background-color: #ccc;
+}
+.blue-on-gray {
+  color: #003366;
+  background-color: #ccc;
+}
+.blue-on-silver {
+  color: #003366;
+  background-color: #ccc;
+}
+.white-on-gold {
+  color: #fff;
+  background-color: #cccc99;
+}
+.white-on-blue {
+  color: #fff;
+  background-color: #003366;
+}
+.white-on-grey {
+  color: #fff;
+  background-color: #ccc;
+}
+.white-on-gray {
+  color: #fff;
+  background-color: #ccc;
+}
+.white-on-silver {
+  color: #fff;
+  background-color: #ccc;
+}
+.grey-on-gold {
+  color: #ccc;
+  background-color: #cccc99;
+}
+.grey-on-blue {
+  color: #ccc;
+  background-color: #003366;
+}
+.grey-on-white {
+  color: #ccc;
+  background-color: #fff;
+}
+.gray-on-gold {
+  color: #ccc;
+  background-color: #cccc99;
+}
+.gray-on-blue {
+  color: #ccc;
+  background-color: #003366;
+}
+.gray-on-white {
+  color: #ccc;
+  background-color: #fff;
+}
+.silver-on-gold {
+  color: #ccc;
+  background-color: #cccc99;
+}
+.silver-on-blue {
+  color: #ccc;
+  background-color: #003366;
+}
+.silver-on-white {
+  color: #ccc;
+  background-color: #fff;
+}
+/*
+.make-classes(@prefix, @list) {
+  .iter(length(@list));
+  .iter(@i) when (@i > 0) {
+    .iter(@i - 1);
+    @pair:  extract(@list, @i);
+    @key:   extract(@pair, 1);
+    @value: extract(@pair, 2);
+    .@{prefix}-@{key} {
+      color: @value;
+    }
+  }
+}
+*/
+/*
+  now the divi settings#
+
+ */
+/*
+  Divi Special Classes
+
+ container class
+#et-top-navigation .primary-menu{}
+
+ container class first unordered list
+#et-top-navigation .primary-menu ul {}
+
+ unordered list within an unordered list
+#et-top-navigation .primary-menu ul ul {}
+
+ each navigation item
+#et-top-navigation .primary-menu li {}
+
+ each navigation item anchor
+#et-top-navigation .primary-menu li a {}
+
+ unordered list if there is drop down items
+#et-top-navigation .primary-menu li ul {}
+
+ each drop down navigation item
+#et-top-navigation .primary-menu li li {}
+
+ each drap down navigation item anchor
+#et-top-navigation .primary-menu li li a {}
+
+ Class for Current Page
+.current_page_item{}
+
+ Class for Current Category
+.current-cat{}
+
+ Class for any other current Menu Item
+.current-menu-item{}
+
+ Class for a Category
+.menu-item-type-taxonomy{}
+
+ Class for Post types
+.menu-item-type-post_type{}
+
+ Class for the home Link
+.menu-item-home{}
+ Class for any custom links
+.menu-item-type-custom{}
+
+
+*/
+/*
+  add gradient to background
+ */
+#main-content,
+#main-header,
+.et_pb_section {
+  background: linear-gradient(270deg, #ccc, #ffffff);
+  /* For Safari 5.1 to 6.0 */
+  background: -webkit-linear-gradient(left, #ccc, #ffffff);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #ccc, #ffffff);
+}
+.et_pb_text,
+.et_pb_accordion,
+.et_pb_toggle,
+.et_pb_tabs,
+.et_pb_post {
+  background-color: #ccc;
+  color: #003366;
+}
+/*
+  now the actual classes to apply it to
+ */
+.et_pb_text,
+.et_pb_accordion,
+.et_pb_toggle,
+.et_pb_tabs,
+.et_pb_post,
+.et_pb_blog_grid .et_pb_post,
+.et_pb_slider,
+.et_pb_image {
+  border: 1px solid #001933;
+  border-radius: 5px;
+  moz-border-radius: 5px;
+  webkit-border-radius: 5px;
+  border-width: 1px !important;
+  padding: 20px !important;
+  /* plenty of padding */
+  position: relative;
+}
+.et_pb_button {
+  border: 1px solid #001933;
+  border-radius: 5px;
+  moz-border-radius: 5px;
+  webkit-border-radius: 5px;
+  border-width: 1px !important;
+  padding: 20px !important;
+  color: #ccc !important;
+  background-color: #000000 !important;
+  /* force selector */
+}
+/* lighten blog excerpt text */
+.custom_fields,
+.et_pb_post .post-content p {
+  color: #003366;
+  /* gold */
+}
+/* hide blog excerpt text */
+.et_pb_post .post-content {
+  display: none;
+}
+/*
+  icons
+ */
+.phone,
+.mobile {
+  /* actually an old phone - need to find a mobile */
+}
+.phone:before,
+.mobile:before {
+  content: "\260e";
+  margin-right: 0.5em;
+}
+.email:before {
+  content: "\2709";
+  margin-right: 0.5em;
+}
+/*
+.phone:before {
+  content: "\260e";
+  margin-right: 0.5em;
+}
+.mobile:before {
+  content: "\260e"; !* actually an old phone - need to find a mobile *!
+  margin-right: 0.5em;
+
+}
+.email:before {
+  content: "\2709";
+  margin-right: 0.5em;
+
+}*/
+.et_pb_toggle_open,
+.et_pb_blog_grid .et_pb_post {
+  background-color: #ccc;
+}
+.et_pb_toggle_open h5.et_pb_toggle_title {
+  background-color: #ccc;
+}
+/*
+
+  misc settings from travelagent.ie
+
+*/
+.et_pb_tab_content,
+.et_pb_all_tabs {
+  background-color: #ccc;
+}
+/* Set the semi-transparent background color */
+.et_pb_slide_content,
+.et_pb_slide_description > h2,
+.et_pb_more_button_wrap {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* Hide the content area if empty (no title and no content) */
+.et_pb_slide_description:first-child .et_pb_slide_content:empty {
+  display: none;
+}
+/* hide the contact form normally */
+#email-us,
+#email-contact-form,
+#callback-request-form {
+  display: none;
+}
+.et_pb_blog_grid .et_pb_image_container img {
+  padding: 5px;
+}
+/*
+
+  site wide settings
+
+ */
+/*# sourceMappingURL=less.css.map */

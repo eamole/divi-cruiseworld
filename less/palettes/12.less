@@ -1,0 +1,67 @@
+/*
+  color palette 12
+  https://www.colorcombos.com/color-schemes/12/ColorCombo12.html
+ */
+@silver : #ccc;
+@gray : @silver;
+@grey : @gray;
+
+@white : #fff;
+
+@blue : #003366;
+
+@gold : #cccc99;
+
+/*
+  dark on light theme
+ */
+@text-color : @dark;
+@bg-color : @light;
+
+@highlight : @darker;
+@border-color: @darkest;
+
+@dark : @blue;
+
+@light : @silver;
+
+/*
+
+  now we need to combine them in a way that works for divi
+
+ */
+
+//.for-each(@pair in @colors) {
+//  @key: at(@pair, 1);
+//  .text-@{key} {
+//    color: at(@pair, 2);
+//  }
+//}
+
+@colors: silver @silver,gray @gray, grey @grey, white @white, blue @blue , gold @gold ;
+
+//.make-classes(text, @colors);
+.make-color-classes(@colors);
+.make-color-combos(@colors,@colors);
+
+// impl.:
+
+/*
+.make-classes(@prefix, @list) {
+  .iter(length(@list));
+  .iter(@i) when (@i > 0) {
+    .iter(@i - 1);
+    @pair:  extract(@list, @i);
+    @key:   extract(@pair, 1);
+    @value: extract(@pair, 2);
+    .@{prefix}-@{key} {
+      color: @value;
+    }
+  }
+}
+*/
+
+/*
+  now the divi settings#
+
+ */

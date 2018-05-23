@@ -1,0 +1,25 @@
+/*
+Theme Name:     Divi_Cruiseworld
+Description:    An extension on divi. Allows custom category pages etc
+Author:         eamole
+Template:       Divi
+
+(optional values you can add: Theme URI, Author URI, Version, License, License URI, Tags, Text Domain)
+*/
+@import "pushbuttons.css";
+@import "radar.css";
+@import "rainbow.css";
+@import "shimmer.css";
+@import "delete.css";
+@import "less.css";	/* could enqueue less.less  */
+
+
+/*
+	my cusomisations
+*/
+
+/*
+	reveal background image!!
+	attach directly to element itself
+*/
+

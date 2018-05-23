@@ -1,0 +1,136 @@
+
+/*
+  add gradient to background
+ */
+.sub-menu {
+  .gradient();
+}
+/* round corners on submenus */
+ul.sub-menu {
+  .box(@border-radius,@border-width,@menu-padding);
+}
+
+#logo {
+  .bg-color(@light);
+  .box(0,0,@menu-padding);
+  // width:@logo-width;
+  max-height:90%;
+}
+
+/* move from right to left - need to move the search right */
+#et-top-navigation {
+  float :left;
+}
+// try to get it vertical centre
+#top-menu-nav, #top-menu {
+  vertical-align: middle;
+}
+.et_header_style_left .et-fixed-header #et-top-navigation nav > ul > li > a, .et_header_style_split .et-fixed-header #et-top-navigation nav > ul > li > a {
+  padding-bottom: @menu-padding ;
+}
+
+current_page_item ,
+#et-top-navigation  li.menu-item {
+  .text-color(@silver);
+  .box(@border-radius,@border-width,@menu-padding);
+  //.bg-color(@light);
+  .gradient(@silver,@gold,45deg);
+}
+/*
+  need to make some sort of subtle button styling
+ */
+
+
+
+
+/*
+  override huge padding on a elements in menu
+ */
+.et_header_style_left #et-top-navigation nav > ul > li > a, .et_header_style_split #et-top-navigation nav > ul > li > a {
+  padding-bottom: @menu-padding;
+}
+
+
+
+
+/*  create a multi col submenu */
+.sub-menu-columns {
+  /*width: 40px;	*/
+}
+
+.sub-menu-columns ul.sub-menu {
+  display: inline-block;
+  float: left;
+  width: @submenu-multicol-width ;
+  height: 400px;
+  overflow-y: auto;
+}
+
+/* stop long text break flows */
+.sub-menu-columns ul.sub-menu li{
+  overflow-x: hidden;
+}
+/* alt cols left and right */
+.sub-menu-columns ul.sub-menu li:nth-child(odd) {
+  float: left;
+  margin-right: 10px;
+}
+.sub-menu-columns ul.sub-menu li:nth-child(even) {
+  float: right;
+}
+
+/* move menu to left */
+/*
+#et-top-navigation {
+	float :left;
+}
+*/
+/* create some space around the text */
+/*
+current_page_item ,
+#et-top-navigation  li.menu-item {
+	color:#666;
+}
+#et-top-navigation  li.menu-item {
+	background-color:#aaa;
+	padding-left: 10px;
+	padding-top: 10px;
+	margin : 5px;
+	border-radius:5px;
+}
+
+*/
+
+/* hover effect */
+/*
+#et-top-navigation  li.menu-item:hover {
+	color:#333;
+	background-color:#999;
+}
+
+*/
+
+/* sticky top nav
+/*
+  #et-top-navigation {
+
+    background:#2194af;
+    height:60px;
+    z-index:170;
+    margin:0 auto;
+    border-bottom:1px solid #dadada;
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    text-align: right;
+    padding-right:30px
+}
+*/
+
+/* transparent menus */
+/*#et-top-navigation {
+	background-color:transparent;
+}
+*/

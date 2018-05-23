@@ -1,0 +1,41 @@
+
+.note {
+
+  width: 30%;
+  padding: 1em 1.5em;
+  margin: 2em auto;
+  color: #fff;
+  background: #97C02F;
+  border-radius: @border-radius;
+  //.round-border(@border-radius);
+
+}
+// only works with pretagged
+.fold {
+  position: relative;
+}
+
+.fold::before {
+
+  //border-radius: @border-radius;
+  //.round-border(@border-radius);
+  //border-width: 8px;
+  //border-color: #000 #000 transparent transparent;
+  //background: #658E15;
+
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-width: 0 16px 16px 0;
+  border-style: solid;
+  border-color: #658E15 #fff;
+  /*
+  only needed for FF 3.x
+  display: block;
+  width: 0
+  */
+  // add a shadow
+  .shadow();
+}
+

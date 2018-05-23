@@ -1,0 +1,168 @@
+/*
+  Divi Special Classes
+
+ container class
+#et-top-navigation .primary-menu{}
+
+ container class first unordered list
+#et-top-navigation .primary-menu ul {}
+
+ unordered list within an unordered list
+#et-top-navigation .primary-menu ul ul {}
+
+ each navigation item
+#et-top-navigation .primary-menu li {}
+
+ each navigation item anchor
+#et-top-navigation .primary-menu li a {}
+
+ unordered list if there is drop down items
+#et-top-navigation .primary-menu li ul {}
+
+ each drop down navigation item
+#et-top-navigation .primary-menu li li {}
+
+ each drap down navigation item anchor
+#et-top-navigation .primary-menu li li a {}
+
+ Class for Current Page
+.current_page_item{}
+
+ Class for Current Category
+.current-cat{}
+
+ Class for any other current Menu Item
+.current-menu-item{}
+
+ Class for a Category
+.menu-item-type-taxonomy{}
+
+ Class for Post types
+.menu-item-type-post_type{}
+
+ Class for the home Link
+.menu-item-home{}
+ Class for any custom links
+.menu-item-type-custom{}
+
+
+*/
+
+/*
+  add gradient to background
+ */
+#main-content, #main-header , .et_pb_section {
+  .gradient(@light,@lightest);
+}
+
+
+.et_pb_text,
+.et_pb_accordion,
+.et_pb_toggle,
+.et_pb_tabs,
+.et_pb_post {
+
+    .bg-color();
+    .text-color();
+
+}
+
+
+
+/*
+  now the actual classes to apply it to
+ */
+.et_pb_text,
+.et_pb_accordion,
+.et_pb_toggle,
+.et_pb_tabs,
+.et_pb_post,
+.et_pb_blog_grid .et_pb_post, /* more specific to avoid override */
+.et_pb_slider,
+.et_pb_image {
+  .box();  /* plenty of padding */
+  .fold();
+}
+
+.et_pb_button {
+  .box();
+  .text(@light) !important; /* force selector */
+
+}
+
+
+/* lighten blog excerpt text */
+.custom_fields,
+.et_pb_post .post-content p {
+  color: @dark;   /* gold */
+}
+/* hide blog excerpt text */
+.et_pb_post .post-content {
+  display: none;
+}
+
+/*
+  icons
+ */
+
+.phone , .mobile {  /* actually an old phone - need to find a mobile */
+  .icon-before("\260e");
+}
+.email {
+  .icon-before("\2709");
+}
+
+/*
+.phone:before {
+  content: "\260e";
+  margin-right: 0.5em;
+}
+.mobile:before {
+  content: "\260e"; !* actually an old phone - need to find a mobile *!
+  margin-right: 0.5em;
+
+}
+.email:before {
+  content: "\2709";
+  margin-right: 0.5em;
+
+}*/
+
+.et_pb_toggle_open, .et_pb_blog_grid .et_pb_post {
+  .bg-color();
+}
+.et_pb_toggle_open h5.et_pb_toggle_title {
+  .bg-color();
+}
+
+
+
+/*
+
+  misc settings from travelagent.ie
+
+*/
+
+.et_pb_tab_content, .et_pb_all_tabs {
+  .bg-color();
+}
+
+/* Set the semi-transparent background color */
+.et_pb_slide_content,
+.et_pb_slide_description > h2,
+.et_pb_more_button_wrap {
+  .bg-transparent();
+}
+
+/* Hide the content area if empty (no title and no content) */
+.et_pb_slide_description:first-child .et_pb_slide_content:empty {
+  display:none;
+}
+/* hide the contact form normally */
+#email-us, #email-contact-form, #callback-request-form {
+  display:none;
+}
+
+.et_pb_blog_grid .et_pb_image_container img {
+  padding:@small-padding;
+}
